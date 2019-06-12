@@ -1,0 +1,24 @@
+{
+  "Features": [
+    {
+      "Name": "featurewithnodate",
+      "StartDate": null,
+      "EndDate": null
+    },
+    {
+      "Name": "featurewithstartdate",
+      "StartDate": "2018-06-11",
+      "EndDate": null
+    },
+    {
+      "Name": "featurewithenddate",
+      "StartDate": null,
+      "EndDate": "2018-06-11"
+    },
+    {
+      "Name": "featurewithstartenddate",
+      "StartDate": "2018-06-11",
+      "EndDate": "2018-06-15"
+    }
+  ]
+}
