@@ -5,7 +5,7 @@
     <Description>A simple ASP.NET Core  service extension to roll out some features by limiting the availability by date.
 
 - Some small fixes</Description>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageTags>feature toogles;feature flag;configuration</PackageTags>
     <Copyright>Copyleft 2019</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
