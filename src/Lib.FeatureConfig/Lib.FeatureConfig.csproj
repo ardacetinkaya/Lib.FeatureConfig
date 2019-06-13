@@ -4,11 +4,13 @@
     <Authors>Arda</Authors>
     <Description>A simple ASP.NET Core  service extension to roll out some features by limiting the availability by date.
 
-- Feature name error fixed</Description>
-    <Version>1.0.1</Version>
+- Some small fixes</Description>
+    <Version>1.0.2</Version>
     <PackageTags>feature toogles;feature flag;configuration</PackageTags>
     <Copyright>Copyleft 2019</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/ardacetinkaya/Lib.FeatureConfig</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
