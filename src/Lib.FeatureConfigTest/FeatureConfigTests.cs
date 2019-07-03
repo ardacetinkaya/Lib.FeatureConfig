@@ -80,5 +80,148 @@ namespace Lib.FeatureConfigTest
 
             Assert.True(result);
         }
+
+        [Fact]
+        public void FeatureForWithStartEndDate1_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For="Mike",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate","Mike");
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate2_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For = "Mike",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "Mik");
+
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate3_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For = "Mike",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "");
+
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate4_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For = "Mike",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "    ");
+
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate5_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For = "Mike",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "    Mike");
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate6_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For="       ",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "Mike");
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate7_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "Mike");
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void FeatureForWithStartEndDate8_Test()
+        {
+            FeaturesService fs = new FeaturesService("features.json");
+            fs._features = new System.Collections.Generic.List<Feature>();
+            fs._features.Add(new Feature
+            {
+                Name = "featurewithstartenddate",
+                For = "Mike",
+                StartDate = DateTime.Now.Add(new TimeSpan(-2, 0, 0, 0)),
+                EndDate = DateTime.Now.Add(new TimeSpan(1, 0, 0, 0)),
+            });
+
+            var result = fs.IsEnabled("featurewithstartenddate", "    MIKE");
+
+            Assert.False(result);
+        }
     }
 }
