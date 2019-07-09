@@ -29,7 +29,7 @@ namespace Lib.FeatureConfig
 
         }
 
-        public bool IsEnabled(string featureName)
+        public bool IsEnabled(string featureName, string forWho = "")
         {
             if (_features == null) return false;
 
@@ -43,6 +43,11 @@ namespace Lib.FeatureConfig
 
             if (feature == null) return false;
 
+            var featureFor = feature.For?.Trim();
+            if (!string.IsNullOrEmpty(featureFor) && !featureFor.Equals(forWho.Trim()))
+            {
+                return false;
+            }
             DateTime now = DateTime.Now;
 
             if (feature.StartDate == null && feature.EndDate == null)

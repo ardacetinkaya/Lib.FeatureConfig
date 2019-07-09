@@ -2,6 +2,6 @@
 {
     public interface IFeatureService
     {
-        bool IsEnabled(string featureName);
+        bool IsEnabled(string featureName,string forWho="");
     }
 }
