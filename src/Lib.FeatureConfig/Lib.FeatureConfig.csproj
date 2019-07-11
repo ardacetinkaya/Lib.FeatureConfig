@@ -4,8 +4,8 @@
     <Authors>Arda</Authors>
     <Description>A simple ASP.NET Core  service extension to roll out some features by limiting the availability by date.
 
-- Some small fixes</Description>
-    <Version>1.0.3</Version>
+- "For" property check option is added to a feature; to provide additional enable/disable check according a field. </Description>
+    <Version>1.1.0</Version>
     <PackageTags>feature toogles;feature flag;configuration</PackageTags>
     <Copyright>Copyleft 2019</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
