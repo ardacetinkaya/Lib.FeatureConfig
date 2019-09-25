@@ -16,7 +16,7 @@ Lib.FeatureConfig is a simple(I mean very very simple) service extension for ASP
 ## Usage
 1. Add Lib.FeatureConfig Nuget package to ASP.NET Core project. https://www.nuget.org/packages/Lib.FeatureConfig/ 
 ```cmd
-dotnet add package Lib.FeatureConfig --version 1.0.3
+dotnet add package Lib.FeatureConfig --version 2.0.0
 ```
 
 2. **AddFeatures()** service extension to _services_ within ConfigureServices method in Startup.cs
